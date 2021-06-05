@@ -89,12 +89,15 @@ currentTime=hour();
 if(currentTime==(LastFed+1)){
   update("Playing");
   foodObj.garden()
+  foodObj.scale=0.5
 }else if(currentTime==(LastFed+2)){
   update("Sleeping")
   foodObj.bedroom()
+  foodObj.scale=1
 }else if(currentTime>(LastFed+2)&& currentTime<=(LastFed+4)){
   update("Bathing")
   foodObj.washroom()
+  foodObj.scale=1
 }else{
   update("Hungry")
   foodObj.display()
